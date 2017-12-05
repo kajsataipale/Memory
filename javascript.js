@@ -1,4 +1,4 @@
-let memory_array = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H'];
+let memory_array = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H']; // Empty variables and my array
 let memory_values = [];
 let memory_tile_id = [];
 let tiles_flipped = 0;
@@ -14,20 +14,21 @@ function shuffle(a) {    // This function takes the memory_array and return a ra
 
 memory_array = shuffle(memory_array);
 
-
 console.log(memory_array);
 
 var boardDiv = document.querySelector('.memory-board'); // This function will generate all the cards in the board.
 
 function newBoard() {
+  for (var i = 0; i < 16; i++) {
  tiles_flipped = 0;
  var output = '';
- _.forEach(memory_array, function(memory_array_value, index) {
- output += '<div id="tile_'+ index +'" onclick="memoryFlipTile(this,\''+ memory_array_value +'\')"></div>';
- });
-document.querySelector('.memory-board').innerHTML = memory_array_value;
+   newBoard= document.createElement('div');
+   newBoard.className = 'cards';
+ output += '<div id="tile_'+ index +'" onclick="FlipTile(this,\''+ memory_array_value +'\')"></div>';
+ };
+ document.querySelector('.memory-board');
 
 
-console.log(newBoard);
 
 }
+console.log(newBoard);
