@@ -31,3 +31,19 @@ h1 {
   display: flex;
   justify-content: center;
 }
+button{
+  margin-top: 1%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  color:white;
+  background-color: grey;
+  font-size: 90%;
+  width: 20%;
+  height: 10vh;
+  cursor: pointer;
+}
+button:hover{
+  background-color: blue;
+  color: pink;
