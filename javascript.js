@@ -26,16 +26,13 @@ var boardDiv = document.querySelector('.memory-board'); // This function will ge
         document.querySelector(".memory-board").appendChild(arrayDiv[i]);
    }
 
+   const Flipcards = document.querySelectorAll('.cards');
 
-var el = document.querySelector('.card');
+Array.from(Flipcards).forEach( (Flipcards) =>{
+   Flipcards.addEventListener('click', () => {
 
- el.addEventListener('click', function(){
-  toggleClass("card-flipped");
+     Flipcards.classList.toggle('card-flipped');
+
+   })
+
 })
-// if ($(".card-flipped").size() == 2)
-// {
-//     setTimeout(checkPattern,4000);
-// }
-
-
-console.log(SelectCard);
