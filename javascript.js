@@ -4,7 +4,7 @@ let memory_tile_id = [];
 let tiles_flipped = 0;
 let output = '';
 
-function shuffle(a) {
+function shuffle(a) {    // This function takes the memory_array and return a random letter.
     for (let i = a.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [a[i], a[j]] = [a[j], a[i]];
@@ -13,3 +13,21 @@ function shuffle(a) {
 }
 
 memory_array = shuffle(memory_array);
+
+
+console.log(memory_array);
+
+var boardDiv = document.querySelector('.memory-board'); // This function will generate all the cards in the board.
+
+function newBoard() {
+ tiles_flipped = 0;
+ var output = '';
+ _.forEach(memory_array, function(memory_array_value, index) {
+ output += '<div id="tile_'+ index +'" onclick="memoryFlipTile(this,\''+ memory_array_value +'\')"></div>';
+ });
+document.querySelector('.memory-board').innerHTML = memory_array_value;
+
+
+console.log(newBoard);
+
+}

@@ -11,12 +11,12 @@ header{
   justify-content: center;
 }
 h1 {
-  font-size: 150%;
+  font-size: 100%;
 
 }
 .mainboardClass{
   background:#dddddd;
-	width:95vh;
+	width:95%;
 	height:80vh;
   padding:1%;
 	margin:0px auto;
