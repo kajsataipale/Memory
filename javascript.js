@@ -1,5 +1,6 @@
 let memory_array = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H']; // Empty variables and my array
 let memory_values = [];
+let cardsImage = [0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7];
 let memory_tile_id = [];
 let tiles_flipped = 0;
 let output = '';
@@ -24,6 +25,11 @@ var boardDiv = document.querySelector('.memory-board'); // This function will ge
        arrayDiv[i] = document.createElement('div');
         arrayDiv[i].className = 'cards';
         document.querySelector(".memory-board").appendChild(arrayDiv[i]);
+           // arrayDiv[i].classList.add('class', 'card');
+           // arrayDiv[i].innerHTML = `<span class="hidden" data-id="${cardsImage[i]}"></span>`;
+           // arrayDiv[i].childNodes[0].style.backgroundImage = `url('./images/${cardsImage[i]}.png')`;
+           //
+           //  arrayDiv[i].appendChild( arrayDiv[i]);
    }
 
    const Flipcards = document.querySelectorAll('.cards');

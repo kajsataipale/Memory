@@ -49,7 +49,11 @@ button:hover{
   color: pink;
 }
 .cards{
-  background-color: #456783;
+  background-color: tomato;
+  background-image: url('images/back.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 	width:20%;
 	height:20%;
 	float:left;
