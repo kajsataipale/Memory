@@ -1,0 +1,33 @@
+body {
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #eddee4;
+}
+
+header{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+h1 {
+  font-size: 150%;
+
+}
+.mainboardClass{
+  background:#dddddd;
+	width:95vh;
+	height:80vh;
+  padding:1%;
+	margin:0px auto;
+  border-radius: 84px;
+  box-shadow: inset 0px 0px 20px -6px rgba(97,89,97,1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+}
