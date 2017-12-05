@@ -18,17 +18,24 @@ console.log(memory_array);
 
 var boardDiv = document.querySelector('.memory-board'); // This function will generate all the cards in the board.
 
-function newBoard() {
-  for (var i = 0; i < 16; i++) {
- tiles_flipped = 0;
- var output = '';
-   newBoard= document.createElement('div');
-   newBoard.className = 'cards';
- output += '<div id="tile_'+ index +'" onclick="FlipTile(this,\''+ memory_array_value +'\')"></div>';
- };
- document.querySelector('.memory-board');
+   var arrayDiv = new Array();
+   for (var i = 0; i < 16; i++) {
+     // arrayDiv[i].dataset.card = 'block' ;
+       arrayDiv[i] = document.createElement('div');
+        arrayDiv[i].className = 'cards';
+        document.querySelector(".memory-board").appendChild(arrayDiv[i]);
+   }
 
 
+var el = document.querySelector('.card');
 
-}
-console.log(newBoard);
+ el.addEventListener('click', function(){
+  toggleClass("card-flipped");
+})
+// if ($(".card-flipped").size() == 2)
+// {
+//     setTimeout(checkPattern,4000);
+// }
+
+
+console.log(SelectCard);
