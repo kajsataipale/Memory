@@ -4,6 +4,7 @@ let memory_tile_id = [];
 let tiles_flipped = 0;
 let output = '';
 let cards = [];
+let openCards = 0;
 const board = document.querySelector('.memory-board');
 
 
@@ -32,10 +33,6 @@ const boardDiv = document.querySelector('.memory-board'); // This function will 
    }
 
 
-
-
-
-
      const Flipcards = document.querySelectorAll('.cards'); // Here´s where I add a class to all the cards to make them flip.
 
   Array.from(Flipcards).forEach( (Flipcards) =>{
@@ -46,7 +43,6 @@ const boardDiv = document.querySelector('.memory-board'); // This function will 
      })
 
   })
-
 
 
 
@@ -73,4 +69,4 @@ Refresh.addEventListener('click', (a) => {
        arrayDiv[i].childNodes[0].style.backgroundImage = `url('images/${cardsImage[i]}.jpg')`;
 
   }
-  });
+  })
