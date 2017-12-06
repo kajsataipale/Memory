@@ -7,7 +7,7 @@ let cards = [];
 const board = document.querySelector('.memory-board');
 
 
-function shuffle(a) {    // This function takes the memory_array and return a random letter.
+function shuffle(a) {    // This function takes the cardsImage and return a random image.
     for (let i = a.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [a[i], a[j]] = [a[j], a[i]];
@@ -16,7 +16,6 @@ function shuffle(a) {    // This function takes the memory_array and return a ra
 }
 
 cardsImage = shuffle(cardsImage);
-
 
 
 const boardDiv = document.querySelector('.memory-board'); // This function will generate all the cards in the board.
@@ -33,6 +32,10 @@ const boardDiv = document.querySelector('.memory-board'); // This function will 
    }
 
 
+
+
+
+
    const Flipcards = document.querySelectorAll('.cards');
 
 Array.from(Flipcards).forEach( (Flipcards) =>{
@@ -43,3 +46,43 @@ Array.from(Flipcards).forEach( (Flipcards) =>{
    })
 
 })
+
+
+
+
+
+
+const Refresh = document.querySelector('.reset');
+
+
+Refresh.addEventListener('click', (a) => {
+
+  function shuffle(a) {    // This function takes the cardsImage and return a random image.
+      for (let i = a.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+  }
+  cardsImage = shuffle(cardsImage);
+
+
+  for (var i = 0; i <cardsImage.length; i++) {
+      // arrayDiv[i] = document.createElement('div');
+       // arrayDiv[i].className = 'cards';
+       //
+       arrayDiv[i].innerHTML = `<span class="hidden" data-id="${cardsImage[i]}"></span>`;
+       arrayDiv[i].childNodes[0].style.backgroundImage = `url('images/${cardsImage[i]}.jpg')`;
+        //
+        // document.querySelectorAll(".cards").appendChild(arrayDiv[i]);
+  }
+  });
+
+
+
+
+
+
+
+
+console.log(Refresh);
