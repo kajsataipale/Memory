@@ -1,5 +1,4 @@
-// let memory_array = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H']; // Empty variables and my array
-let memory_values = [];
+let memory_values = [];  // Empty variables and my array
 let cardsImage = [0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7];
 let memory_tile_id = [];
 let tiles_flipped = 0;
@@ -24,7 +23,6 @@ const boardDiv = document.querySelector('.memory-board'); // This function will 
 
    var arrayDiv = new Array();
    for (var i = 0; i <cardsImage.length; i++) {
-     // arrayDiv[i].dataset.card = 'block' ;
        arrayDiv[i] = document.createElement('div');
         arrayDiv[i].className = 'cards';
         //
@@ -32,8 +30,6 @@ const boardDiv = document.querySelector('.memory-board'); // This function will 
         arrayDiv[i].childNodes[0].style.backgroundImage = `url('images/${cardsImage[i]}.jpg')`;
 
          document.querySelector(".memory-board").appendChild(arrayDiv[i]);
-
-         console.log(arrayDiv[i]);
    }
 
 
