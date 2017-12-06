@@ -52,12 +52,12 @@ Array.from(Flipcards).forEach( (Flipcards) =>{
 
 
 
-const Refresh = document.querySelector('.reset');
+const Refresh = document.querySelector('.reset'); // My reset function, when you click on the button it mixes the images.
 
 
 Refresh.addEventListener('click', (a) => {
 
-  function shuffle(a) {    // This function takes the cardsImage and return a random image.
+  function shuffle(a) {
       for (let i = a.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
           [a[i], a[j]] = [a[j], a[i]];
@@ -68,13 +68,10 @@ Refresh.addEventListener('click', (a) => {
 
 
   for (var i = 0; i <cardsImage.length; i++) {
-      // arrayDiv[i] = document.createElement('div');
-       // arrayDiv[i].className = 'cards';
-       //
+
        arrayDiv[i].innerHTML = `<span class="hidden" data-id="${cardsImage[i]}"></span>`;
        arrayDiv[i].childNodes[0].style.backgroundImage = `url('images/${cardsImage[i]}.jpg')`;
-        //
-        // document.querySelectorAll(".cards").appendChild(arrayDiv[i]);
+
   }
   });
 
