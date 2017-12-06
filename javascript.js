@@ -36,16 +36,16 @@ const boardDiv = document.querySelector('.memory-board'); // This function will 
 
 
 
-   const Flipcards = document.querySelectorAll('.cards');
+     const Flipcards = document.querySelectorAll('.cards'); // Here´s where I add a class to all the cards to make them flip.
 
-Array.from(Flipcards).forEach( (Flipcards) =>{
-   Flipcards.addEventListener('click', () => {
+  Array.from(Flipcards).forEach( (Flipcards) =>{
+     Flipcards.addEventListener('click', () => {
 
-     Flipcards.classList.toggle('card-flipped');
+       Flipcards.classList.toggle('card-flipped');
 
-   })
+     })
 
-})
+  })
 
 
 
@@ -74,12 +74,3 @@ Refresh.addEventListener('click', (a) => {
 
   }
   });
-
-
-
-
-
-
-
-
-console.log(Refresh);
