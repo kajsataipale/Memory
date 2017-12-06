@@ -1,9 +1,12 @@
-let memory_array = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H']; // Empty variables and my array
+// let memory_array = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H']; // Empty variables and my array
 let memory_values = [];
 let cardsImage = [0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7];
 let memory_tile_id = [];
 let tiles_flipped = 0;
 let output = '';
+let cards = [];
+const board = document.querySelector('.memory-board');
+
 
 function shuffle(a) {    // This function takes the memory_array and return a random letter.
     for (let i = a.length - 1; i > 0; i--) {
@@ -13,24 +16,26 @@ function shuffle(a) {    // This function takes the memory_array and return a ra
     return a;
 }
 
-memory_array = shuffle(memory_array);
+cardsImage = shuffle(cardsImage);
 
-console.log(memory_array);
 
-var boardDiv = document.querySelector('.memory-board'); // This function will generate all the cards in the board.
+
+const boardDiv = document.querySelector('.memory-board'); // This function will generate all the cards in the board.
 
    var arrayDiv = new Array();
-   for (var i = 0; i < 16; i++) {
+   for (var i = 0; i <cardsImage.length; i++) {
      // arrayDiv[i].dataset.card = 'block' ;
        arrayDiv[i] = document.createElement('div');
         arrayDiv[i].className = 'cards';
-        document.querySelector(".memory-board").appendChild(arrayDiv[i]);
-           // arrayDiv[i].classList.add('class', 'card');
-           // arrayDiv[i].innerHTML = `<span class="hidden" data-id="${cardsImage[i]}"></span>`;
-           // arrayDiv[i].childNodes[0].style.backgroundImage = `url('./images/${cardsImage[i]}.png')`;
-           //
-           //  arrayDiv[i].appendChild( arrayDiv[i]);
+        //
+        arrayDiv[i].innerHTML = `<span class="hidden" data-id="${cardsImage[i]}"></span>`;
+        arrayDiv[i].childNodes[0].style.backgroundImage = `url('images/${cardsImage[i]}.jpg')`;
+
+         document.querySelector(".memory-board").appendChild(arrayDiv[i]);
+
+         console.log(arrayDiv[i]);
    }
+
 
    const Flipcards = document.querySelectorAll('.cards');
 
