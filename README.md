@@ -1,5 +1,5 @@
 # Memory
-<img src="https://media.giphy.com/media/10AtGpKtV2z0o8/giphy.gif"alt="funnyMemory" height="100%" width="100%">
+<img src="https://media.giphy.com/media/10AtGpKtV2z0o8/giphy.gif" alt="02 - Logic & Presentation" width="100%">
 Welcome to my very first assignment in Javascript! The assignment was to create a memory game.
 
 ## Criterias
