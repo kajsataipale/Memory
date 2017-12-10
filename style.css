@@ -12,6 +12,9 @@ header{
 h1 {
   font-size: 100%;
 }
+span .hidden{
+pointer-events:none;
+}
 .memory-board{
   background:#dddddd;
 	width:95%;
@@ -102,22 +105,15 @@ button:hover{
 @media screen and (max-width: 699px) {
 
   .memory-board{
-    width:100vh;
-  	height:100vh;
-    padding: 5%;
+    padding: 7%;
   }
-
   h1 {
-    font-size: 200%;
+    font-size: 100%;
   }
-
   button{
-    margin-top: 5%;
-    color:white;
-    background-color: grey;
+    margin-top: 3%;
     font-size: 160%;
     width: 80%;
-    height: 20vh;
-    cursor: pointer;
+    height: 10vh;
   }
 }

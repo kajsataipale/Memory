@@ -25,7 +25,7 @@ const boardDiv = document.querySelector('.memory-board'); // This function will 
    for (var i = 0; i <cardsImage.length; i++) {
        arrayDiv[i] = document.createElement('div');
         arrayDiv[i].className = 'cards';
-        //
+        arrayDiv[i].dataset.id=cardsImage[i];
         arrayDiv[i].innerHTML = `<span class="hidden" data-id="${cardsImage[i]}"></span>`;
         arrayDiv[i].childNodes[0].style.backgroundImage = `url('images/${cardsImage[i]}.jpg')`;
 
@@ -35,16 +35,54 @@ const boardDiv = document.querySelector('.memory-board'); // This function will 
 
      const Flipcards = document.querySelectorAll('.cards'); // Here´s where I add a class to all the cards to make them flip.
 
-  Array.from(Flipcards).forEach( (Flipcards) =>{
-     Flipcards.addEventListener('click', () => {
+     Array.from(Flipcards).forEach( (card) =>{
+       card.addEventListener('click', () => {
+         card.classList.toggle('card-flipped');
+          memory_values.push(card.dataset.id);
+         console.log(memory_values);
+         if (memory_values.length===2){
+           if (!memory_values[0]===memory_values[1]) {
+             // tiles_flipped++;
+             // console.log('Match');
+             // console.log(tiles_flipped);
+             // memory_values= [];
 
-       Flipcards.classList.toggle('card-flipped');
-
-     })
-
-  })
 
 
+             setTimeout(function () {
+               console.log('No match');
+               Array.from(Flipcards).forEach( (card) =>{
+               card.classList.remove('card-flipped');
+
+
+             memory_values= [];
+             })
+             }, 1500);
+           }
+           else  {
+
+             tiles_flipped++;
+             console.log('Match');
+             console.log(tiles_flipped);
+             memory_values= [];
+// setTimeout(function () {
+//   console.log('No match');
+//   Array.from(Flipcards).forEach( (card) =>{
+//   card.classList.remove('card-flipped');
+//
+//
+// memory_values= [];
+// })
+// }, 1500);
+               // memory_values[0].classList.remove('card-flipped');
+
+           }if (tiles_flipped===8) {
+             console.log('You win');
+           }
+
+         }
+       })
+     });
 
 
 
@@ -64,7 +102,7 @@ Refresh.addEventListener('click', (a) => {
 
 
   for (var i = 0; i <cardsImage.length; i++) {
-
+       arrayDiv[i].classList.remove('card-flipped');
        arrayDiv[i].innerHTML = `<span class="hidden" data-id="${cardsImage[i]}"></span>`;
        arrayDiv[i].childNodes[0].style.backgroundImage = `url('images/${cardsImage[i]}.jpg')`;
 
