@@ -41,40 +41,28 @@ const boardDiv = document.querySelector('.memory-board'); // This function will 
           memory_values.push(card.dataset.id);
          console.log(memory_values);
          if (memory_values.length===2){
-           if (!memory_values[0]===memory_values[1]) {
-             // tiles_flipped++;
-             // console.log('Match');
-             // console.log(tiles_flipped);
-             // memory_values= [];
-
-
-
-             setTimeout(function () {
-               console.log('No match');
-               Array.from(Flipcards).forEach( (card) =>{
-               card.classList.remove('card-flipped');
-
-
-             memory_values= [];
-             })
-             }, 1500);
-           }
-           else  {
-
+           if (memory_values[0]===memory_values[1]) {
              tiles_flipped++;
              console.log('Match');
              console.log(tiles_flipped);
              memory_values= [];
-// setTimeout(function () {
-//   console.log('No match');
-//   Array.from(Flipcards).forEach( (card) =>{
-//   card.classList.remove('card-flipped');
-//
-//
-// memory_values= [];
-// })
-// }, 1500);
-               // memory_values[0].classList.remove('card-flipped');
+
+
+
+           }
+           else  {
+
+          
+setTimeout(function () {
+  console.log('No match');
+  Array.from(Flipcards).forEach( (card) =>{
+  card.classList.remove('card-flipped');
+
+
+memory_values= [];
+})
+}, 1500);
+               memory_values[0].classList.remove('card-flipped');
 
            }if (tiles_flipped===8) {
              console.log('You win');
