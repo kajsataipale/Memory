@@ -1,8 +1,6 @@
 let memory_values = [];  // Empty variables and my array
 let cardsImage = [0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7];
-let memory_tile_id = [];
 let tiles_flipped = [];
-let output = '';
 let cards = [];
 let openCards = 0;
 const board = document.querySelector('.memory-board');
@@ -35,37 +33,6 @@ const boardDiv = document.querySelector('.memory-board'); // This function will 
 
      const Flipcards = document.querySelectorAll('.cards'); // Here´s where I add a class to all the cards to make them flip.
 
-         // arrayDiv[i].addEventListener('click', (event) => {
-         //   memory_values.push(event.target); //Lägger till card i cardflipped-array
-         //   console.log(event.target.dataset);
-         //  arrayDiv[i].classList.toggle('flip');
-         //
-         //   if (memory_values.length === 2) {
-         //     if (memory_values[0].dataset.id === memory_values[1].dataset.id) {
-         //       tiles_flipped++;
-         //       memory_values[0].classList.add('clicked');
-         //       memory_values[1].classList.add('clicked');
-         //       console.log('Match!')
-         //       console.log(tiles_flipped);
-         //       memory_values = []
-         //
-         //     } else {
-         //       console.log('No match.')
-         //       memory_values[0].classList.remove('flip');
-         //       memory_values[1].classList.remove('flip');
-         //       memory_values = []
-         //     }
-         //     if (tiles_flipped === 8) {
-         //       console.log('Victory!')
-         //     }
-         //
-         //   }
-         // })
-
-
-
-
-
 
 
      Array.from(Flipcards).forEach( (card) =>{
@@ -82,22 +49,20 @@ const boardDiv = document.querySelector('.memory-board'); // This function will 
              console.log(tiles_flipped);
              memory_values= [];
 
-
-
            }
            else  {
 
 
-setTimeout(function () {
-  console.log('No match');
+            setTimeout(function () {
+              console.log('No match');
 
-  memory_values[0].classList.remove('card-flipped');
-  memory_values[1].classList.remove('card-flipped');
+              memory_values[0].classList.remove('card-flipped');
+              memory_values[1].classList.remove('card-flipped');
 
 
-memory_values= [];
-}, 1500)
-}
+            memory_values= [];
+            }, 1500)
+            }
 
 
            if (tiles_flipped===8) {

@@ -73,7 +73,7 @@ button:hover{
   height: 100%;
   width: 100%;
 }
-.card-flipped .clicked {
+.card-flipped.clicked {
   pointer-events: none;
 
 }
