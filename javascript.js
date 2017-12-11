@@ -71,10 +71,10 @@ const boardDiv = document.querySelector('.memory-board'); // This function will 
      Array.from(Flipcards).forEach( (card) =>{
        card.addEventListener('click', () => {
          card.classList.toggle('card-flipped');
-          memory_values.push(card.dataset.id);
+          memory_values.push(card);
          console.log(memory_values);
          if (memory_values.length===2){
-           if (memory_values[0]===memory_values[1]) {
+           if (memory_values[0].dataset.id===memory_values[1].dataset.id) {
              tiles_flipped++;
              memory_values[0].classList.add('clicked');
              memory_values[1].classList.add('clicked');
@@ -91,7 +91,6 @@ const boardDiv = document.querySelector('.memory-board'); // This function will 
 setTimeout(function () {
   console.log('No match');
 
-  // cards.classList.remove('card-flipped');
   memory_values[0].classList.remove('card-flipped');
   memory_values[1].classList.remove('card-flipped');
 
