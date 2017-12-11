@@ -35,11 +35,18 @@ const boardDiv = document.querySelector('.memory-board'); // This function will 
 
 
 
+
+
      Array.from(Flipcards).forEach( (card) =>{
        card.addEventListener('click', () => {
          card.classList.toggle('card-flipped');
           memory_values.push(card);
          console.log(memory_values);
+
+         if (memory_values.length === 2)   {
+           const frame = document.querySelector('.memory-board');
+           frame.classList.add('hold');
+
          if (memory_values.length===2){
            if (memory_values[0].dataset.id===memory_values[1].dataset.id) {
              tiles_flipped++;
@@ -48,7 +55,7 @@ const boardDiv = document.querySelector('.memory-board'); // This function will 
              console.log('Match');
              console.log(tiles_flipped);
              memory_values= [];
-
+            frame.classList.remove('hold');
            }
            else  {
 
@@ -58,7 +65,7 @@ const boardDiv = document.querySelector('.memory-board'); // This function will 
 
               memory_values[0].classList.remove('card-flipped');
               memory_values[1].classList.remove('card-flipped');
-
+              frame.classList.remove('hold');
 
             memory_values= [];
             }, 1500)
@@ -68,6 +75,8 @@ const boardDiv = document.querySelector('.memory-board'); // This function will 
            if (tiles_flipped===8) {
              console.log('You win');
            }
+
+         }
 
          }
        })
