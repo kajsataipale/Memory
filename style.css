@@ -13,14 +13,14 @@ h1 {
   font-size: 100%;
 }
 span .hidden{
-pointer-events:none;
+  pointer-events:none;
 }
 .memory-board{
   background:#dddddd;
-	width:95%;
-	height:80vh;
+  width:95%;
+  height:80vh;
   padding:1%;
-	margin:0px auto;
+  margin:0px auto;
   border-radius: 84px;
   box-shadow: inset 0px 0px 20px -6px rgba(97,89,97,1);
   display: flex;
@@ -28,7 +28,7 @@ pointer-events:none;
   justify-content: center;
 }
 .hold{
-    pointer-events: none;
+  pointer-events: none;
 }
 .button{
   display: flex;
@@ -57,12 +57,12 @@ button:hover{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-	width:20%;
-	height:20%;
-	float:left;
-	margin:1%;
+  width:20%;
+  height:20%;
+  float:left;
+  margin:1%;
   cursor: pointer;
-	font-size:64px;
+  font-size:64px;
 }
 .cards .card-flipped{
   transform: rotateY(0deg);
@@ -81,31 +81,31 @@ button:hover{
 }
 
 .card-flipped{
-    -webkit-animation: flip-er 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-            animation: flip-er 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: flip-er 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: flip-er 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
 }
 @-webkit-keyframes flip-er {
   0% {
     -webkit-transform: rotateY(-80deg);
-            transform: rotateY(-80deg);
+    transform: rotateY(-80deg);
     opacity: 0;
   }
   100% {
     -webkit-transform: rotateY(0);
-            transform: rotateY(0);
+    transform: rotateY(0);
     opacity: 1;
   }
 }
 @keyframes flip-er {
   0% {
     -webkit-transform: rotateY(-80deg);
-            transform: rotateY(-80deg);
+    transform: rotateY(-80deg);
     opacity: 0;
   }
   100% {
     -webkit-transform: rotateY(0);
-            transform: rotateY(0);
+    transform: rotateY(0);
     opacity: 1;
   }
 }
