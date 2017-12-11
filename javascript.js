@@ -1,8 +1,8 @@
 let memory_values = [];  // Empty variables and my array
 let cardsImage = [0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7];
 let tiles_flipped = [];
-let cards = [];
-let openCards = 0;
+
+// let openCards = 0;
 const board = document.querySelector('.memory-board');
 
 
@@ -43,14 +43,14 @@ const boardDiv = document.querySelector('.memory-board'); // This function will 
           memory_values.push(card);
          console.log(memory_values);
 
-         if (memory_values.length === 2)   {
+         if (memory_values.length === 2)   {        // here I set so you only can press two cards at time
            const frame = document.querySelector('.memory-board');
            frame.classList.add('hold');
 
          if (memory_values.length===2){
            if (memory_values[0].dataset.id===memory_values[1].dataset.id) {
              tiles_flipped++;
-             memory_values[0].classList.add('clicked');
+             memory_values[0].classList.add('clicked');       // here I add a class so that the matched cards can´t be clicked
              memory_values[1].classList.add('clicked');
              console.log('Match');
              console.log(tiles_flipped);
@@ -63,7 +63,7 @@ const boardDiv = document.querySelector('.memory-board'); // This function will 
             setTimeout(function () {
               console.log('No match');
 
-              memory_values[0].classList.remove('card-flipped');
+              memory_values[0].classList.remove('card-flipped');        // if the cards don´t match the cards flip back after 1.5 sec.
               memory_values[1].classList.remove('card-flipped');
               frame.classList.remove('hold');
 
@@ -74,6 +74,7 @@ const boardDiv = document.querySelector('.memory-board'); // This function will 
 
            if (tiles_flipped===8) {
              console.log('You win');
+             tiles_flipped=0;
            }
 
          }
@@ -98,9 +99,10 @@ Refresh.addEventListener('click', (a) => {
   }
   cardsImage = shuffle(cardsImage);
 
-
+ tiles_flipped=0;
   for (var i = 0; i <cardsImage.length; i++) {
        arrayDiv[i].classList.remove('card-flipped');
+       arrayDiv[i].dataset.id=cardsImage[i];
        arrayDiv[i].innerHTML = `<span class="hidden" data-id="${cardsImage[i]}"></span>`;
        arrayDiv[i].childNodes[0].style.backgroundImage = `url('images/${cardsImage[i]}.jpg')`;
 
