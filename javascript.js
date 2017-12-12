@@ -2,7 +2,6 @@ let memory_values = [];  // Empty variables and my array
 let cardsImage = [0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7];
 let tiles_flipped = [];
 
-// let openCards = 0;
 const board = document.querySelector('.memory-board');
 
 
@@ -41,7 +40,6 @@ Array.from(Flipcards).forEach( (card) =>{
   card.addEventListener('click', () => {
     card.classList.toggle('card-flipped');
     memory_values.push(card);
-    console.log(memory_values);
 
     if (memory_values.length === 2)   {        // here I set so you only can press two cards at time
       const frame = document.querySelector('.memory-board');
@@ -52,8 +50,6 @@ Array.from(Flipcards).forEach( (card) =>{
           tiles_flipped++;
           memory_values[0].classList.add('clicked');       // here I add a class so that the matched cards can´t be clicked
           memory_values[1].classList.add('clicked');
-          console.log('Match');
-          console.log(tiles_flipped);
           memory_values= [];
           frame.classList.remove('hold');
         }
@@ -61,7 +57,6 @@ Array.from(Flipcards).forEach( (card) =>{
 
 
           setTimeout(function () {
-            console.log('No match');
 
             memory_values[0].classList.remove('card-flipped');        // if the cards don´t match the cards flip back after 1.5 sec.
             memory_values[1].classList.remove('card-flipped');
@@ -73,7 +68,7 @@ Array.from(Flipcards).forEach( (card) =>{
 
 
         if (tiles_flipped===8) {
-          console.log('You win');
+          alert('Congrats you win, press the Refresh button to play again');
           tiles_flipped=0;
         }
 

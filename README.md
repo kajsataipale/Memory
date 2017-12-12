@@ -15,6 +15,10 @@ Welcome to my very first assignment in Javascript! The assignment was to create 
 
 * The project should only be written in HTML, CSS and JavaScript.
 
+## Getting started
+1. Download as a zip or clone repository to your local drive.
+2. Open index.html in your browser (Google Chrome or Mozilla Firefox)
+3. Start the game!
 
 ## Tested by
 * Edvin Wiberg<br>
