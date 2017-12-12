@@ -1,7 +1,7 @@
 # Memory
 <img src="https://media.giphy.com/media/10AtGpKtV2z0o8/giphy.gif" alt="02 - Logic & Presentation" width="100%">
 Welcome to my very first assignment in Javascript! The assignment was to create a memory game.
-
+I have created a mean girls memory, enjoy!
 ## Criterias
 * There should be at least 8 pairs and a maximum of 10 pairs.
 
