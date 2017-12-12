@@ -18,3 +18,4 @@ Welcome to my very first assignment in Javascript! The assignment was to create 
 
 ## Tested by
 * Edvin Wiberg<br>
+* Maria Eidland
