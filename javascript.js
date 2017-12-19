@@ -38,18 +38,18 @@ const Flipcards = document.querySelectorAll('.cards'); // Here´s where I add a 
 
 Array.from(Flipcards).forEach( (card) =>{
   card.addEventListener('click', () => {
-    card.classList.toggle('card-flipped');
+    card.classList.add('card-flipped');  // here I add a class so that the clicked card can´t be clicked when it's flipped
     memory_values.push(card);
 
     if (memory_values.length === 2)   {        // here I set so you only can press two cards at time
       const frame = document.querySelector('.memory-board');
       frame.classList.add('hold');
 
+
+
       if (memory_values.length===2){
         if (memory_values[0].dataset.id===memory_values[1].dataset.id) {
           tiles_flipped++;
-          memory_values[0].classList.add('clicked');       // here I add a class so that the matched cards can´t be clicked
-          memory_values[1].classList.add('clicked');
           memory_values= [];
           frame.classList.remove('hold');
         }
@@ -57,7 +57,8 @@ Array.from(Flipcards).forEach( (card) =>{
 
 
           setTimeout(function () {
-
+            memory_values[0].classList.remove('clicked');       // here I add a class so that the matched cards can´t be clicked
+            memory_values[1].classList.remove('clicked');
             memory_values[0].classList.remove('card-flipped');        // if the cards don´t match the cards flip back after 1.5 sec.
             memory_values[1].classList.remove('card-flipped');
             frame.classList.remove('hold');
