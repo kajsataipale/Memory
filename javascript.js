@@ -68,8 +68,12 @@ Array.from(Flipcards).forEach( (card) =>{
 
 
         if (tiles_flipped===8) {
-          alert('Congrats you win, press the Refresh button to play again');
-          tiles_flipped=0;
+
+          setTimeout(function(){
+            alert('Congrats you win, press the Refresh button to play again');
+            tiles_flipped=0;
+
+          }, 1500)
         }
 
       }
